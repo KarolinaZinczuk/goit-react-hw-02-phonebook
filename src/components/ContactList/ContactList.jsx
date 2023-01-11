@@ -22,18 +22,18 @@ class ContactList extends Component {
     render() {
         const { contacts, handleRemove } = this.props;
         return (
-                <ul className={styles.list}>
-                    {contacts.length ? contacts.map(({ id, name, number }) => (
-                        <ContactListItem
-                            key={id}
-                            id={id}
-                            name={name}
-                            number={number}
-                            handleRemove={handleRemove}
-                        />
-                    ))
-                        : 'No contacts'}
-                </ul>
+            <ul className={styles.list}>
+                {contacts.length ? contacts.map(({ id, name, number }) => (
+                    <ContactListItem
+                        key={id}
+                        id={id}
+                        name={name}
+                        number={number}
+                        handleRemove={handleRemove}
+                    />
+                ))
+                    : 'No contacts'}
+            </ul>
         );
     }
 }
