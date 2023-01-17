@@ -4,21 +4,6 @@ import PropTypes from "prop-types";
 import styles from "./ContactList.module.css";
 
 class ContactList extends Component {
-    static defaultProps = {
-        contacts: [],
-    };
-
-    static propTypes = {
-        contacts: PropTypes.arrayOf(
-            PropTypes.shape({
-                id: PropTypes.string.isRequired,
-                name: PropTypes.string.isRequired,
-                number: PropTypes.string.isRequired,
-            })
-        ),
-        handleRemove: PropTypes.func,
-    };
-
     render() {
         const { contacts, handleRemove } = this.props;
         return (
@@ -37,5 +22,16 @@ class ContactList extends Component {
         );
     }
 }
+
+ContactList.propTypes = {
+    contacts: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            name: PropTypes.string.isRequired,
+            number: PropTypes.string.isRequired,
+        })
+    ),
+    handleRemove: PropTypes.func,
+};
 
 export default ContactList ;
