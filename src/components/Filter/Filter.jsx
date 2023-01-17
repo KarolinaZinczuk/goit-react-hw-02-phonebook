@@ -3,11 +3,6 @@ import PropTypes from "prop-types";
 import styles from "./Filter.module.css";
 
 class Filter extends Component {
-    static propTypes = {
-        value: PropTypes.string.isRequired,
-        onChange: PropTypes.func.isRequired,
-    }
-
     render() {
         const { value, onChange } = this.props;
         return (
@@ -17,6 +12,11 @@ class Filter extends Component {
             </div>
         )
     }
+}
+
+Filter.propTypes = {
+    value: PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired,
 }
 
 export default Filter ;
